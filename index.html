@@ -287,7 +287,8 @@
     }
     .cat-price strong { display: block; font-size: 22px; font-weight: 700; color: var(--dark); letter-spacing: -.01em; }
     .cat-price { min-width: 0; }
-    .cat-price span { font-size: 12px; color: var(--mid); }
+    .cat-price span { display: block; margin-top: 2px; font-size: 12px; color: var(--mid); white-space: nowrap; }
+    .cat-price strong small { font-size: 13px; font-weight: 500; color: var(--mid); letter-spacing: 0; }
     .cat-btn {
       display: inline-flex; align-items: center; gap: 6px;
       padding: 9px 16px; border-radius: 9999px;
@@ -548,9 +549,9 @@
       </a>
 
       <div class="nav-links">
-        <a href="#servicios"  class="nav-link">Servicios</a>
-        <a href="#catalogo"   class="nav-link">Catálogo</a>
-        <a href="#sobre-mi"   class="nav-link">Sobre mí</a>
+        <a href="#sobre-mi"   class="nav-link">Conoceme</a>
+        <a href="#servicios"  class="nav-link">Enfoque</a>
+        <a href="#catalogo"   class="nav-link">Servicios</a>
         <a href="#faq"        class="nav-link">FAQ</a>
         <a href="#contacto"   class="nav-link">Contacto</a>
       </div>
@@ -565,9 +566,9 @@
 </nav>
 
 <div class="mm" id="mm">
-  <a href="#servicios">Servicios</a>
-  <a href="#catalogo">Catálogo</a>
-  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#sobre-mi">Conoceme</a>
+  <a href="#servicios">Enfoque</a>
+  <a href="#catalogo">Servicios</a>
   <a href="#faq">FAQ</a>
   <a href="#contacto">Contacto</a>
 </div>
@@ -598,11 +599,55 @@
 
 <hr class="hr">
 
+<!-- ══ SOBRE MÍ ═══════════════════════════════════════════════ -->
+<section id="sobre-mi" class="fade">
+  <div class="wrap">
+    <div class="about-inner">
+
+      <!-- Photo -->
+      <div class="about-photo-wrap">
+          <img class="about-photo" src="./assets/images/katha.jpg" alt="MSc. Kathalina Alfaro" />
+        <!-- <div class="about-ph">
+          <svg width="52" height="52" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="22" r="12" stroke="#6B8A5E" stroke-width="2"/>
+            <path d="M8 52c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#6B8A5E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span style="font-size:13px;font-weight:500;color:var(--sage)">Kathalina Alfaro</span>
+        </div> -->
+      </div>
+
+      <!-- Content -->
+      <div>
+        <p class="label about-label">Conoceme</p>
+        <h2 class="h2 about-hl">No soy solo tu especialista.<br>Soy tu guía y aliada.</h2>
+        <p class="body muted about-body">
+          Soy Kathalina Alfaro, Neuropsicopedagoga con Maestría y Coach TDAH certificada con más de 10 años acompañando a familias, niños, adolescentes y adultos a descubrir cómo su cerebro aprende mejor.
+        </p>
+        <p class="body muted about-body">
+          Fundé LÚMINA porque creo que cada mente tiene una manera única y brillante de procesar el mundo. Mi trabajo es ayudarte a encontrar esa manera — y a confiar en ella.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="creds">
+          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Maestría en Neuropsicopedagogía <em>— neurociencia del aprendizaje</em></div></div>
+          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Coach TDAH Certificada <em>— niños, adolescentes y adultos</em></div></div>
+          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Instructora Brain Gym Certificada <em>— movimiento y aprendizaje</em></div></div>
+          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Especialista en Dislexia e Inclusión Educativa</div></div>
+          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Más de 10 años de experiencia clínica y educativa</div></div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
 <!-- ══ SERVICIOS ═════════════════════════════════════════════ -->
 <section id="servicios" class="fade">
   <div class="wrap">
     <div class="sec-head">
-      <p class="label">Servicios</p>
+      <p class="label">Enfoque</p>
       <h2 class="h2">Un acompañamiento para cada mente y cada etapa</h2>
       <p class="muted body">Cada proceso es diseñado según las necesidades únicas de cada persona.</p>
     </div>
@@ -654,7 +699,7 @@
       <div class="svc svc-cream svc-span2">
         <span class="svc-n">08 · Talleres y Capacitaciones</span>
         <div class="svc-name">Talleres para padres, docentes e instituciones</div>
-        <div class="svc-desc">Espacios formativos sobre TDAH, neurodiversidad, regulación emocional e inclusión educativa. Presenciales y virtuales. Inversión: desde ₡60.000 por taller de 2 horas.</div>
+        <div class="svc-desc">Espacios formativos sobre TDAH, neurodiversidad, regulación emocional e inclusión educativa. Presenciales y virtuales.</div>
       </div>
 
     </div>
@@ -667,7 +712,7 @@
 <section id="catalogo" class="fade">
 <div class="wrap">
 <div class="sec-head">
-<p class="label">Catálogo</p>
+<p class="label">Servicios</p>
 <h2 class="h2">Programas, sesiones y talleres</h2>
 <p class="muted body">Elegí la opción que mejor se adapta a tu familia y escribinos por WhatsApp para reservar tu espacio.</p>
 </div>
@@ -680,8 +725,7 @@
 <ul class="cat-pts"><li>5 sesiones de 45 minutos</li><li>Devolución de resultados y recomendaciones</li><li>Atención virtual, presencial o domiciliaria</li></ul>
 <p class="cat-note">El acompañamiento personalizado se propone como una segunda etapa y se contrata por separado.</p>
 <div class="cat-foot">
-<div class="cat-price"><strong>₡175.000</strong><span>total · ₡35.000 por sesión</span></div>
-<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Valoraci%C3%B3n%20diagn%C3%B3stica%20integral.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+<div class="cat-price"><strong>₡175.000 <small>total</small></strong><span>₡35.000 por sesión</span></div>
 </div>
 </article>
 <article class="cat cat-cream">
@@ -693,7 +737,6 @@
 <p class="cat-note">Consultá por nuestros paquetes mensuales.</p>
 <div class="cat-foot">
 <div class="cat-price"><strong>₡35.000</strong><span>por sesión</span></div>
-<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Sesiones%20psicopedag%C3%B3gicas.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
 </div>
 </article>
 <article class="cat cat-terra">
@@ -704,8 +747,7 @@
 <ul class="cat-pts"><li>Apoyo en tareas y técnicas de estudio</li><li>Actividades para fortalecer el aprendizaje</li><li>Miércoles de 5:00 a 7:00 p. m.</li></ul>
 
 <div class="cat-foot">
-<div class="cat-price"><strong>₡70.000</strong><span>mensualidad · ₡20.000 por clase</span></div>
-<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Acompa%C3%B1amiento%20escolar.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+<div class="cat-price"><strong>₡70.000 <small>mensual</small></strong><span>₡20.000 por clase</span></div>
 </div>
 </article>
 <article class="cat cat-cream">
@@ -717,7 +759,6 @@
 
 <div class="cat-foot">
 <div class="cat-price"><strong>Consultá</strong><span>horarios y costos</span></div>
-<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Preparaci%C3%B3n%20para%20pruebas%20estandarizadas%202027.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
 </div>
 </article>
 <article class="cat cat-sage">
@@ -729,7 +770,6 @@
 
 <div class="cat-foot">
 <div class="cat-price"><strong>₡60.000</strong><span>por taller</span></div>
-<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Talleres%20pedag%C3%B3gicos.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
 </div>
 </article>
 </div>
@@ -737,50 +777,6 @@
 <a class="btn btn-sage" href="https://wa.me/c/50672144526" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Ver catálogo completo en WhatsApp</a>
 </div>
 </div>
-</section>
-
-<hr class="hr">
-
-<!-- ══ SOBRE MÍ ═══════════════════════════════════════════════ -->
-<section id="sobre-mi" class="fade">
-  <div class="wrap">
-    <div class="about-inner">
-
-      <!-- Photo -->
-      <div class="about-photo-wrap">
-          <img class="about-photo" src="./assets/images/katha.jpg" alt="MSc. Kathalina Alfaro" />
-        <!-- <div class="about-ph">
-          <svg width="52" height="52" viewBox="0 0 60 60" fill="none">
-            <circle cx="30" cy="22" r="12" stroke="#6B8A5E" stroke-width="2"/>
-            <path d="M8 52c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#6B8A5E" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span style="font-size:13px;font-weight:500;color:var(--sage)">Kathalina Alfaro</span>
-        </div> -->
-      </div>
-
-      <!-- Content -->
-      <div>
-        <p class="label about-label">Sobre mí</p>
-        <h2 class="h2 about-hl">No soy solo tu especialista.<br>Soy tu guía y aliada.</h2>
-        <p class="body muted about-body">
-          Soy Kathalina Alfaro, Neuropsicopedagoga con Maestría y Coach TDAH certificada con más de 10 años acompañando a familias, niños, adolescentes y adultos a descubrir cómo su cerebro aprende mejor.
-        </p>
-        <p class="body muted about-body">
-          Fundé LÚMINA porque creo que cada mente tiene una manera única y brillante de procesar el mundo. Mi trabajo es ayudarte a encontrar esa manera — y a confiar en ella.
-        </p>
-
-        <div class="divider"></div>
-
-        <div class="creds">
-          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Maestría en Neuropsicopedagogía <em>— neurociencia del aprendizaje</em></div></div>
-          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Coach TDAH Certificada <em>— niños, adolescentes y adultos</em></div></div>
-          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Instructora Brain Gym Certificada <em>— movimiento y aprendizaje</em></div></div>
-          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Especialista en Dislexia e Inclusión Educativa</div></div>
-          <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Más de 10 años de experiencia clínica y educativa</div></div>
-        </div>
-
-    </div>
-  </div>
 </section>
 
 <hr class="hr">
@@ -943,7 +939,7 @@
       <div>
         <div class="footer-col-t">LÚMINA</div>
         <div class="footer-links">
-          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#sobre-mi">Conoceme</a>
           <a href="#faq">Preguntas frecuentes</a>
           <a href="#contacto">Reservar consulta</a>
           <a href="https://wa.me/50672144526">WhatsApp 7214-4526</a>
