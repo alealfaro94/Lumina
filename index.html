@@ -249,6 +249,56 @@
     }
     .svc-span2 { grid-column: span 2; }
 
+
+    /* ── CATÁLOGO ────────────────────────────────── */
+    .cat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+    .cat { grid-column: span 2; }
+    .cat:nth-child(n+4) { grid-column: span 3; }
+    .cat {
+      display: flex; flex-direction: column;
+      padding: 28px 26px; border-radius: 20px;
+      border: 1px solid var(--cream2);
+    }
+    .cat-sage  { background: var(--sage-xl); }
+    .cat-cream { background: var(--white); }
+    .cat-terra { background: var(--terra-l); }
+    .cat-tag {
+      align-self: flex-start;
+      font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--sage-d); background: var(--sage-l);
+      padding: 5px 10px; border-radius: 9999px; margin-bottom: 14px;
+    }
+    .cat-terra .cat-tag { color: var(--terra); background: #fff; }
+    .cat-name { font-size: 18px; font-weight: 700; color: var(--dark); line-height: 1.3; margin-bottom: 6px; }
+    .cat-lead { font-size: 14px; font-weight: 600; color: var(--sage-d); line-height: 1.5; margin-bottom: 10px; }
+    .cat-terra .cat-lead { color: var(--terra); }
+    .cat-desc { font-size: 13px; color: var(--mid); line-height: 1.7; margin-bottom: 14px; }
+    .cat-pts { list-style: none; display: grid; gap: 6px; margin-bottom: 14px; }
+    .cat-pts li { font-size: 13px; color: var(--dark); line-height: 1.5; padding-left: 20px; position: relative; }
+    .cat-pts li::before {
+      content: ""; position: absolute; left: 0; top: 4px; width: 12px; height: 12px; border-radius: 50%;
+      background: var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;
+    }
+    .cat-terra .cat-pts li::before { background-color: var(--terra); }
+    .cat-note { font-size: 12px; color: var(--light); line-height: 1.6; font-style: italic; margin-bottom: 14px; }
+    .cat-foot {
+      margin-top: auto; padding-top: 16px; border-top: 1px solid var(--cream2);
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+    }
+    .cat-price strong { display: block; font-size: 22px; font-weight: 700; color: var(--dark); letter-spacing: -.01em; }
+    .cat-price { min-width: 0; }
+    .cat-price span { font-size: 12px; color: var(--mid); }
+    .cat-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 16px; border-radius: 9999px;
+      background: var(--sage); color: #fff; font-size: 13px; font-weight: 600;
+      transition: background .18s, transform .18s; flex-shrink: 0;
+    }
+    .cat-btn:hover { background: var(--sage-d); transform: translateY(-1px); }
+    .cat-cta { margin-top: 36px; text-align: center; }
+    @media (max-width: 920px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } .cat, .cat:nth-child(n+4) { grid-column: span 1; } .cat:last-child { grid-column: span 2; } }
+    @media (max-width: 640px) { .cat-grid { grid-template-columns: 1fr; } .cat:last-child { grid-column: span 1; } }
+
     /* ── SOBRE MÍ ────────────────────────────────── */
     #sobre-mi { background: var(--cream); }
     .about-inner {
@@ -499,6 +549,7 @@
 
       <div class="nav-links">
         <a href="#servicios"  class="nav-link">Servicios</a>
+        <a href="#catalogo"   class="nav-link">Catálogo</a>
         <a href="#sobre-mi"   class="nav-link">Sobre mí</a>
         <a href="#faq"        class="nav-link">FAQ</a>
         <a href="#contacto"   class="nav-link">Contacto</a>
@@ -515,6 +566,7 @@
 
 <div class="mm" id="mm">
   <a href="#servicios">Servicios</a>
+  <a href="#catalogo">Catálogo</a>
   <a href="#sobre-mi">Sobre mí</a>
   <a href="#faq">FAQ</a>
   <a href="#contacto">Contacto</a>
@@ -607,6 +659,84 @@
 
     </div>
   </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ CATÁLOGO ═══════════════════════════════════════════════ -->
+<section id="catalogo" class="fade">
+<div class="wrap">
+<div class="sec-head">
+<p class="label">Catálogo</p>
+<h2 class="h2">Programas, sesiones y talleres</h2>
+<p class="muted body">Elegí la opción que mejor se adapta a tu familia y escribinos por WhatsApp para reservar tu espacio.</p>
+</div>
+<div class="cat-grid">
+<article class="cat cat-sage">
+<span class="cat-tag">Evaluación</span>
+<h3 class="cat-name">Valoración diagnóstica integral</h3>
+<p class="cat-lead">Conocer sus fortalezas para acompañar su aprendizaje.</p>
+<p class="cat-desc">Valoración psicopedagógica para identificar fortalezas, necesidades de apoyo y áreas por mejorar. Exploramos funciones ejecutivas, técnicas de estudio, razonamiento lógico-matemático, lectura, escritura y comprensión mediante baterías estandarizadas y pruebas diagnósticas.</p>
+<ul class="cat-pts"><li>5 sesiones de 45 minutos</li><li>Devolución de resultados y recomendaciones</li><li>Atención virtual, presencial o domiciliaria</li></ul>
+<p class="cat-note">El acompañamiento personalizado se propone como una segunda etapa y se contrata por separado.</p>
+<div class="cat-foot">
+<div class="cat-price"><strong>₡175.000</strong><span>total · ₡35.000 por sesión</span></div>
+<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Valoraci%C3%B3n%20diagn%C3%B3stica%20integral.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+</div>
+</article>
+<article class="cat cat-cream">
+<span class="cat-tag">Acompañamiento</span>
+<h3 class="cat-name">Sesiones psicopedagógicas</h3>
+<p class="cat-lead">Un acompañamiento integral para aprender con más confianza.</p>
+<p class="cat-desc">Iniciamos con una breve entrevista y una evaluación de necesidades para diseñar un plan personalizado de acompañamiento, adaptado al ritmo y las fortalezas de cada persona.</p>
+<ul class="cat-pts"><li>50 minutos por sesión</li><li>Atención virtual, presencial o domiciliaria</li><li>Citas según disponibilidad</li></ul>
+<p class="cat-note">Consultá por nuestros paquetes mensuales.</p>
+<div class="cat-foot">
+<div class="cat-price"><strong>₡35.000</strong><span>por sesión</span></div>
+<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Sesiones%20psicopedag%C3%B3gicas.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+</div>
+</article>
+<article class="cat cat-terra">
+<span class="cat-tag">Grupal</span>
+<h3 class="cat-name">Acompañamiento escolar</h3>
+<p class="cat-lead">Aprender con apoyo, organización y confianza.</p>
+<p class="cat-desc">Acompañamos a los estudiantes en sus tareas, técnicas de estudio y actividades integrales. Además, creamos un horario de estudio personalizado para fortalecer sus hábitos y autonomía.</p>
+<ul class="cat-pts"><li>Apoyo en tareas y técnicas de estudio</li><li>Actividades para fortalecer el aprendizaje</li><li>Miércoles de 5:00 a 7:00 p. m.</li></ul>
+
+<div class="cat-foot">
+<div class="cat-price"><strong>₡70.000</strong><span>mensualidad · ₡20.000 por clase</span></div>
+<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Acompa%C3%B1amiento%20escolar.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+</div>
+</article>
+<article class="cat cat-cream">
+<span class="cat-tag">Inscripciones abiertas</span>
+<h3 class="cat-name">Preparación para pruebas estandarizadas 2027</h3>
+<p class="cat-lead">Sexto y undécimo — ¡preparate desde ya y llegá con mayor confianza!</p>
+<p class="cat-desc">Clases presenciales, ejercicios de práctica y estrategias para comprender las preguntas, organizar el tiempo y resolver los ejercicios.</p>
+<ul class="cat-pts"><li>Material de trabajo incluido</li><li>Práctica guiada y explicación de ejercicios</li><li>Estrategias de estudio y resolución de preguntas</li></ul>
+
+<div class="cat-foot">
+<div class="cat-price"><strong>Consultá</strong><span>horarios y costos</span></div>
+<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Preparaci%C3%B3n%20para%20pruebas%20estandarizadas%202027.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+</div>
+</article>
+<article class="cat cat-sage">
+<span class="cat-tag">Padres · docentes · estudiantes</span>
+<h3 class="cat-name">Talleres pedagógicos</h3>
+<p class="cat-lead">Herramientas prácticas para acompañar, educar y aprender.</p>
+<p class="cat-desc">Espacios de aprendizaje con herramientas prácticas para acompañar el desarrollo y favorecer un entorno educativo positivo. Los temas se adaptan a cada grupo: uso responsable de redes sociales, comunicación asertiva, cómo acompañar a mi hijo o hija con TDAH, apoyos educativos y más.</p>
+<ul class="cat-pts"><li>Materiales incluidos</li><li>Fecha y horario por coordinar</li></ul>
+
+<div class="cat-foot">
+<div class="cat-price"><strong>₡60.000</strong><span>por taller</span></div>
+<a class="cat-btn" href="https://wa.me/50672144526?text=Hola%20L%C3%BAmina%2C%20me%20interesa%3A%20Talleres%20pedag%C3%B3gicos.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Consultar</a>
+</div>
+</article>
+</div>
+<div class="cat-cta">
+<a class="btn btn-sage" href="https://wa.me/c/50672144526" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Ver catálogo completo en WhatsApp</a>
+</div>
+</div>
 </section>
 
 <hr class="hr">
